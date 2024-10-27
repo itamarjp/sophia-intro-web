@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="logo">
+            <h1>Haven BookStore</h1>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header-center">
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="viewcart.html" class="view-cart-button">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </header>
+
+    <section class="about-us" style="padding: 20px; text-align: center;">
+        <h2>About Haven BookStore</h2>
+        <p>Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse selection of books, magazines, journals, and office supplies. With a deep-rooted commitment to fostering literary exploration and a love for reading, it is embarking on the creation of an online presence that mirrors its dedication to the world of words. Serving a broad audience of book lovers and knowledge seekers, its central goal is to amplify its visibility, cultivate a vibrant literary community, and simplify the process of book inquiries and purchases. Its target audience comprises avid readers, students, and individuals in search of high-quality reading materials and office essentials. Book Haven Bookstore’s website theme revolves around celebrating the written word, creating an inviting digital space that encourages literary discovery, and supporting intellectual growth.</p>
+        
+        <h3>Store Address</h3>
+        <p>2501 Parkview Dr #250, Fort Worth, TX 76102, USA</p>
+        
+        <h3>Business Hours</h3>
+        <table style="margin: 0 auto; text-align: center; border-collapse: collapse; width: 50%;">
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ccc;">Monday - Friday</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">9:00 AM - 8:00 PM</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ccc;">Saturday</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">10:00 AM - 6:00 PM</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ccc;">Sunday</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">11:00 AM - 5:00 PM</td>
+            </tr>
+        </table>
+        
+        <h3>Contact Us</h3>
+        <p>Phone: 1-800-123-4567</p>
+        
+        <h3>Contact Form</h3>
+        <form action="#" method="post" style="max-width: 600px; margin: 0 auto;">
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+                <input type="text" id="name" name="name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+                <input type="email" id="email" name="email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="message" style="display: block; margin-bottom: 5px;">Message:</label>
+                <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <input type="checkbox" id="customOrder" name="customOrder" style="margin-right: 10px;">
+                <label for="customOrder">Custom Order</label>
+            </div>
+            <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="footer-logo">
+        </div>
+        <div class="footer-center">
+            <ul>
+                <li><a href="index.html">HomePage</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about-us.html">About-US</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

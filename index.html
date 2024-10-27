@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven BookStore - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="logo">
+            <h1>Haven BookStore</h1>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header-center">
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="viewcart.html" class="view-cart-button">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </header>
+
+    <section class="carousel">
+        <div class="carousel-track" id="carousel-track">
+            <div class="carousel-slide">
+                <img src="images/event1.jpg" alt="Book Signing with Local Authors">
+                <h3>Book Signing with Local Authors - April 20th</h3>
+                <button class="book-event-button" onclick="window.location.href='about-us.html'">Book This Event</button>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/event2.jpg" alt="Children's Story Time">
+                <h3>Children's Story Time - April 28th</h3>
+                <button class="book-event-button" onclick="window.location.href='about-us.html'">Book This Event</button>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/event3.jpg" alt="Poetry Reading Night">
+                <h3>Poetry Reading Night - May 10th</h3>
+                <button class="book-event-button" onclick="window.location.href='about-us.html'">Book This Event</button>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/event4.jpg" alt="Summer Book Fair">
+                <h3>Summer Book Fair - June 15th</h3>
+                <button class="book-event-button" onclick="window.location.href='about-us.html'">Book This Event</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="best-sellers" id="best-sellers-container" style="padding: 20px;">
+        <h2>Best-Selling Reads</h2>
+        <!-- Best sellers will be dynamically loaded here -->
+    </section>
+
+    <section class="newsletter-section" style="text-align: center; padding: 20px;">
+        <h3>Subscribe to Our Newsletter</h3>
+        <input type="email" placeholder="Enter your email" required style="padding: 10px; width: 300px; max-width: 100%; margin-top: 10px;">
+        <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">Subscribe</button>
+    </section>
+
+<footer>
+        <div class="footer-left">
+            <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="footer-logo">
+        </div>
+        <div class="footer-center">
+            <ul>
+                <li><a href="index.html">HomePage</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about-us.html">About-US</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const track = document.getElementById('carousel-track');
+        const slides = Array.from(track.children);
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+        }
+
+        function autoSlide() {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        }
+
+        setInterval(autoSlide, 5000); // Change slide every 5 seconds
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
