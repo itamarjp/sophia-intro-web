@@ -6,70 +6,78 @@
     <title>Book Haven Bookstore</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <div class="header-left">
-            <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="logo" width="50" height="50">
-            <h1>Haven BookStore</h1>
+<body class="w3-light-grey">
+    <header class="w3-container w3-padding-16 w3-white w3-card">
+        <div class="w3-row w3-align-middle">
+            <div class="w3-col s12 m4 l3 w3-left-align header-left">
+                <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="logo w3-image" style="width:50px;height:auto;">
+                <span class="w3-xlarge w3-margin-left">Haven BookStore</span>
+            </div>
+            <div class="w3-col s12 m8 l9 w3-right-align">
+                <nav class="header-center w3-bar">
+                    <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+                    <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small">Gallery</a>
+                    <a href="events.html" class="w3-bar-item w3-button w3-hide-small">Events</a>
+                    <a href="about-us.html" class="w3-bar-item w3-button w3-hide-small">About Us</a>
+                    <a href="viewcart.html" class="w3-bar-item w3-button w3-right view-cart-button" title="View Cart">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                    <button class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" id="mobile-menu" aria-label="Open Menu">
+                        <i class="bi bi-list"></i>
+                    </button>
+                </nav>
+            </div>
         </div>
-        <div class="menu-toggle" id="mobile-menu"></div>
-            <i class="bi bi-list"></i>
-        </div>
-        <nav class="header-center">
-            <ul id="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-            </ul>
-        </nav>
-        <div class="header-right">
-            <a href="viewcart.html" class="view-cart-button">
-                <i class="bi bi-cart"></i>
-            </a>
+        <div id="mobile-nav" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+            <a href="events.html" class="w3-bar-item w3-button">Events</a>
+            <a href="about-us.html" class="w3-bar-item w3-button">About Us</a>
         </div>
     </header>
 
-
-    <section id="cart" class="cart-section" style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
-        <h2>Your Cart</h2>
-        <table id="cart-items" style="width: 100%; max-width: 800px; border-collapse: collapse;">
-            <thead>
-                <tr>
-                    <th style="border: 1px solid #ccc; padding: 10px;">Title</th>
-                    <th style="border: 1px solid #ccc; padding: 10px;">Description</th>
-                    <th style="border: 1px solid #ccc; padding: 10px;">Price</th>
-                    <th style="border: 1px solid #ccc; padding: 10px;">Remove</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Cart items will be dynamically inserted here -->
-            </tbody>
-        </table>
-        <div id="cart-total" style="margin-top: 20px; font-size: 18px; font-weight: bold;">Total: $0.00</div>
-        <button onclick="clearCart()" style="margin-top: 20px; padding: 10px 20px; background-color: #e74c3c; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Clear Cart</button>
-        <button onclick="processOrder()" style="margin-top: 20px; padding: 10px 20px; background-color: #2ecc71; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Process Order</button>
+    <section id="cart" class="cart-section w3-container w3-white w3-card w3-margin-top w3-padding-32" style="display: flex; flex-direction: column; align-items: center;">
+        <h2 class="w3-center">Your Cart</h2>
+        <div style="width:100%;max-width:800px;">
+            <table id="cart-items" class="w3-table-all w3-centered w3-margin-bottom">
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be dynamically inserted here -->
+                </tbody>
+            </table>
+            <div id="cart-total" class="w3-large w3-margin-top w3-margin-bottom w3-text-bold">Total: $0.00</div>
+            <button onclick="clearCart()" class="w3-button w3-red w3-round-large w3-margin-right">Clear Cart</button>
+            <button onclick="processOrder()" class="w3-button w3-green w3-round-large w3-margin-left">Process Order</button>
+        </div>
     </section>
     
-
-    <footer>
-        <div class="footer-left">
-            <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="footer-logo">
-        </div>
-        <div class="footer-center">
-            <ul>
-                <li><a href="index.html">HomePage</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about-us.html">About-US</a></li>
-                <li><a href="events.html">Events</a></li>
-            </ul>
-        </div>
-        <div class="footer-right">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
+    <footer class="w3-container w3-padding-16 w3-white w3-card w3-margin-top">
+        <div class="w3-row">
+            <div class="w3-col s12 m4 l3 footer-left w3-left-align">
+                <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="footer-logo w3-image" style="width:50px;height:auto;">
+            </div>
+            <div class="w3-col s12 m4 l6 footer-center w3-center">
+                <ul class="w3-ul w3-inline">
+                    <li class="w3-inline"><a href="index.html" class="w3-button w3-white">HomePage</a></li>
+                    <li class="w3-inline"><a href="gallery.html" class="w3-button w3-white">Gallery</a></li>
+                    <li class="w3-inline"><a href="about-us.html" class="w3-button w3-white">About-US</a></li>
+                    <li class="w3-inline"><a href="events.html" class="w3-button w3-white">Events</a></li>
+                </ul>
+            </div>
+            <div class="w3-col s12 m4 l3 footer-right w3-right-align">
+                <a href="#" class="w3-button w3-white"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="w3-button w3-white"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="w3-button w3-white"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="w3-button w3-white"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="w3-button w3-white"><i class="bi bi-linkedin"></i></a>
+            </div>
         </div>
     </footer>
 
@@ -91,10 +99,10 @@
                 cart.forEach((item, index) => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
-                        <td style="border: 1px solid #ccc; padding: 10px;">${item.title}</td>
-                        <td style="border: 1px solid #ccc; padding: 10px;">${item.description}</td>
-                        <td style="border: 1px solid #ccc; padding: 10px;">$${item.price}</td>
-                        <td style="border: 1px solid #ccc; padding: 10px; text-align: center;"><button onclick="removeFromCart(${index})" style="padding: 5px 10px; background-color: #e74c3c; color: white; border: none; border-radius: 3px; cursor: pointer;">Remove</button></td>
+                        <td>${item.title}</td>
+                        <td>${item.description}</td>
+                        <td>$${item.price}</td>
+                        <td><button onclick="removeFromCart(${index})" class="w3-button w3-red w3-round-small">Remove</button></td>
                     `;
                     cartItemsContainer.appendChild(row);
                     total += parseFloat(item.price);

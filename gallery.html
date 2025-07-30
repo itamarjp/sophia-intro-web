@@ -6,53 +6,61 @@
     <title>Book Haven Bookstore</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <div class="header-left">
-            <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="logo" width="50" height="50">
-            <h1>Haven BookStore</h1>
+<body class="w3-light-grey">
+    <header class="w3-container w3-padding-16 w3-white w3-card">
+        <div class="w3-row w3-align-middle">
+            <div class="w3-col s12 m4 l3 w3-left-align header-left">
+                <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="logo w3-image" style="width:50px;height:auto;">
+                <span class="w3-xlarge w3-margin-left">Haven BookStore</span>
+            </div>
+            <div class="w3-col s12 m8 l9 w3-right-align">
+                <nav class="header-center w3-bar">
+                    <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+                    <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small">Gallery</a>
+                    <a href="events.html" class="w3-bar-item w3-button w3-hide-small">Events</a>
+                    <a href="about-us.html" class="w3-bar-item w3-button w3-hide-small">About Us</a>
+                    <a href="viewcart.html" class="w3-bar-item w3-button w3-right view-cart-button" title="View Cart">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                    <button class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" id="mobile-menu" aria-label="Open Menu">
+                        <i class="bi bi-list"></i>
+                    </button>
+                </nav>
+            </div>
         </div>
-        <div class="menu-toggle" id="mobile-menu"></div>
-            <i class="bi bi-list"></i>
-        </div>
-        <nav class="header-center">
-            <ul id="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-            </ul>
-        </nav>
-        <div class="header-right">
-            <a href="viewcart.html" class="view-cart-button">
-                <i class="bi bi-cart"></i>
-            </a>
+        <div id="mobile-nav" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+            <a href="events.html" class="w3-bar-item w3-button">Events</a>
+            <a href="about-us.html" class="w3-bar-item w3-button">About Us</a>
         </div>
     </header>
     
-    <section class="product-gallery">
-        <h2>Our Products</h2>
-        <div id="product-gallery" class="product-grid"></div>
+    <section class="product-gallery w3-container w3-white w3-card w3-margin-top w3-padding-32">
+        <h2 class="w3-center">Our Products</h2>
+        <div id="product-gallery" class="product-grid w3-row-padding"></div>
     </section>
 
-    <footer>
-        <div class="footer-left">
-            <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="footer-logo">
-        </div>
-        <div class="footer-center">
-            <ul>
-                <li><a href="index.html">HomePage</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about-us.html">About-US</a></li>
-                <li><a href="events.html">Events</a></li>
-            </ul>
-        </div>
-        <div class="footer-right">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
+    <footer class="w3-container w3-padding-16 w3-white w3-card w3-margin-top">
+        <div class="w3-row">
+            <div class="w3-col s12 m4 l3 footer-left w3-left-align">
+                <img src="images/Client3_LogoPalette2_2E2E4E.png" alt="Haven BookStore Logo" class="footer-logo w3-image" style="width:50px;height:auto;">
+            </div>
+            <div class="w3-col s12 m4 l6 footer-center w3-center">
+                <ul class="w3-ul w3-inline">
+                    <li class="w3-inline"><a href="index.html" class="w3-button w3-white">HomePage</a></li>
+                    <li class="w3-inline"><a href="gallery.html" class="w3-button w3-white">Gallery</a></li>
+                    <li class="w3-inline"><a href="about-us.html" class="w3-button w3-white">About-US</a></li>
+                    <li class="w3-inline"><a href="events.html" class="w3-button w3-white">Events</a></li>
+                </ul>
+            </div>
+            <div class="w3-col s12 m4 l3 footer-right w3-right-align">
+                <a href="#" class="w3-button w3-white"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="w3-button w3-white"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="w3-button w3-white"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="w3-button w3-white"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="w3-button w3-white"><i class="bi bi-linkedin"></i></a>
+            </div>
         </div>
     </footer>
 
